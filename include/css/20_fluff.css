@@ -1,0 +1,96 @@
+
+
+/* Info tooltips
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.help-tip
+{
+    float: right;
+    text-align: center;
+    border-radius: 50%;
+    width: 1.6em;
+    height: 1.6em;
+    font-size: 64%;
+    line-height: 1.5;
+    cursor: default;
+    background-color: #CCCCCC;
+}
+
+.help-tip:before
+{
+    content: '?';
+    font-weight: bold;
+    color: #656565;
+}
+
+.help-tip:hover p
+{
+    clear: both;
+    display: block;
+    transform-origin: 100% 0%;
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+/* The tooltip */
+.help-tip p
+{
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: 275px;
+    top: 6px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* The pointer of the tooltip */
+.help-tip p:before
+{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: #rgba(0,0,0,0);
+    right: 10px;
+    top: -12px;
+    padding: 1vw; /* gives it a larger area for hovering before hiding */
+}
+
+ /* Prevents the tooltip from being hidden */
+.help-tip p:after
+{
+    width: 100%;
+    height: 40px;
+    content: '';
+}
+
+/* CSS animation */
+@-webkit-keyframes fadeIn
+{
+    0%
+    { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100%
+    {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn
+{
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
