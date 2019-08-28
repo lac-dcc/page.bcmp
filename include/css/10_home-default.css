@@ -1,43 +1,49 @@
 /* Copy pasta to match width with padding
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-* {
+*
+{
 	box-sizing: border-box;
 }
 
 
 /* width */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+::-webkit-scrollbar
+{
+	width: 8px;
+	height: 8px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+::-webkit-scrollbar-track
+{
+	background: #f1f1f1;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
+::-webkit-scrollbar-thumb
+{
+	background: #888;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+::-webkit-scrollbar-thumb:hover
+{
+	background: #555;
 }
 
 
-/* Class dimensions and screen compatibility (not tested)
+/* Copy pasta to fit Class dimensions and screen compatibility
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container
 {
-	/*position: relative;*/
+/*position: relative;*/
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 0 20px;
 	box-sizing: border-box;
 }
+
 .column,
 .columns
 {
@@ -49,30 +55,19 @@
 /* For devices larger than 400px */
 @media (min-width: 400px)
 {
-	.container
-	{
-		width: 85%;
-		padding: 0;
-	}
+	.container                      {	width: 85%; padding: 0;}
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px)
 {
-	.container
-	{
-		width: 80%;
-	}
+	.container                      { width: 80%;}
+
 	.column,
-	.columns
-	{
-		margin-left: 4%;
-	}
+	.columns                        {	margin-left: 4%;}
+
 	.column:first-child,
-	.columns:first-child
-	{
-		margin-left: 0;
-	}
+	.columns:first-child            {	margin-left: 0;}
 
 	.one.column,
 	.one.columns                    { width: 4.66666666667%;}
@@ -192,7 +187,7 @@ ul
 	text-align: center;
 	grid-row: 1;
 	grid-column: 1 / 3;
-	padding: 0.8vw;
+	padding: 1.4vw;
 	background: #272822;
 }
 
@@ -226,4 +221,31 @@ ul
 	grid-row: 3;
 	grid-column: 1 / 3;
 	padding: 8vw 4vw 1vw 4vw;
+}
+
+
+/* Tables and lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+table
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th
+{
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 0.35vw;
+}
+
+tr:nth-child(even)
+{
+	background-color: #dddddd;
+}
+
+ul, li
+{
+	padding: 0.3vw;
 }
