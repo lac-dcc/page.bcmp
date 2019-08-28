@@ -1,5 +1,39 @@
 
 
+.icon-expand
+{
+    position: relative;
+    top: 2px;
+}
+
+.label-expand:hover
+{
+    font-weight: bold;
+    color: #FD971F;
+}
+
+.div-bdescription {
+  display: none;
+  color: #d4d4d4;
+  padding: 0.2em 0.3em 0.4em 1em;
+  height: 0;
+}
+
+:checked + .div-bdescription {
+  display: block;
+  color: #323232;
+  height: auto;
+  animation-name: expand;
+  animation-duration: 0.1s;
+}
+
+@keyframes expand {
+    0% {color:#d4d4d4;line-height: 0;}
+    100% {color: #323232;}
+}
+
+
+
 /* Info tooltips
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
