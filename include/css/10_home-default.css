@@ -189,6 +189,8 @@ ul
 	grid-column: 1 / 3;
 	padding: 1.4vw;
 	background: #272822;
+	height: auto;
+	max-height: 6vw;
 }
 
 #span-header-logo
@@ -248,4 +250,21 @@ tr:nth-child(even)
 ul, li
 {
 	padding: 0.3vw;
+}
+
+table.num
+{
+    counter-reset: rowNumber;
+}
+
+table.num tr:not(:first-child)
+{
+    counter-increment: rowNumber;
+}
+
+table.num tr td:first-child::before
+{
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
 }

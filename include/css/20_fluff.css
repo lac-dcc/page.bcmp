@@ -4,6 +4,13 @@
 {
 	position: relative;
 	top: 2px;
+	border: 1px solid grey;
+	border-radius: 1.6em;
+}
+
+.icon-expand:hover
+{
+	background-color: #eaeaea;
 }
 
 .label-expand:hover
@@ -17,7 +24,7 @@
 	display: none;
 	color: #d4d4d4;
 	overflow: auto;
-	max-height: 30vw;
+	max-height: 20vw;
 	padding: 0.5vw 0.6vw 0.5vw 2vw;
 	height: 0;
 }
