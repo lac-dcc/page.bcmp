@@ -5,7 +5,6 @@
     <title>Angha</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="include/css/00_reset.css">
     <link rel="stylesheet" type="text/css" href="include/css/10_home-default.css">
@@ -19,6 +18,9 @@
     <link rel="mask-icon" href="include/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
   </head>
 
