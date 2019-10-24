@@ -3,12 +3,13 @@
   <head>
 
     <title>Angha</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <link rel="stylesheet" type="text/css" href="include/css/00_reset.css">
     <link rel="stylesheet" type="text/css" href="include/css/10_home-default.css">
     <link rel="stylesheet" type="text/css" href="include/css/20_fluff.css">
+    <link rel="stylesheet" type="text/css" href="include/css/30_mobile.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     <link rel="apple-touch-icon" sizes="180x180" href="include/icons/apple-touch-icon.png">
@@ -31,9 +32,11 @@
 
       <div id="div-header-logo"><span id="span-header-logo">Angha</span></div>
 
-      <div id="div-col-01">
+    <!-- ==============================section============================== -->
 
-        <div> 
+      <div id="div-col-01" class="section">
+
+        <div>
           <h3>Angha Project</h3>
           The goal of the Angha Project is to generate C benchmarks out of open
           source repositories. To this end, we download programs from these
@@ -47,158 +50,232 @@
           have extracted feature vectors (59 different features) for all these
           benchmarks, in case the interested reader wants to use them to
           autotune compilers. The passes used in the extraction are listed
-          below (result of <i>-mem2reg -O0 -VarCounter -EdgeCounter -stats</i> ).
+          below (result of <i><nobr>-mem2reg</nobr> <nobr>-O0</nobr>
+          <nobr>-VarCounter</nobr> <nobr>-EdgeCounter</nobr>
+          <nobr>-stats</nobr></i>).
         </div>
 
         <hr style="visibility:hidden;">
 
-        <ul>
-          <li>
-            <label for="checkbox-extracted-features" class="label-expand">
-              <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
-              <!--<input type="checkbox" id="checkbox-angha-1-1" style="display:none;">-->
-              <span><b>List of currently extracted features</b></span>
-            </label>
-            <input type="checkbox" id="checkbox-extracted-features" style="display:none;">
-            <div class="div-hidden-expandable">
-              <table style="width:90%; padding:0.5vw">
-                <tr><th><b> # </b></th><th><b>Pass Name</b></th><th><b>Description of the feature</b></th></tr><tr><td>1</td><td>EdgeCounter*</td><td>Number_of_edges.</td></tr><tr><td>2</td><td>VarCounter*</td><td>Number_of_named_variables.</td></tr><tr><td>3</td><td>VarCounter*</td><td>Number_of_variable_uses_(using_GetNumUses).</td></tr><tr><td>4</td><td>cgscc-passmgr</td><td>Maximum_CGSCCPassMgr_iterations_on_one_SCC</td></tr><tr><td>5</td><td>instcount</td><td>Number_of_Add_insts</td></tr><tr><td>6</td><td>instcount</td><td>Number_of_Alloca_insts</td></tr><tr><td>7</td><td>instcount</td><td>Number_of_BitCast_insts</td></tr><tr><td>8</td><td>instcount</td><td>Number_of_Br_insts</td></tr><tr><td>9</td><td>instcount</td><td>Number_of_Call_insts</td></tr><tr><td>10</td><td>instcount</td><td>Number_of_FAdd_insts</td></tr><tr><td>11</td><td>instcount</td><td>Number_of_FCmp_insts</td></tr><tr><td>12</td><td>instcount</td><td>Number_of_FDiv_insts</td></tr><tr><td>13</td><td>instcount</td><td>Number_of_FMul_insts</td></tr><tr><td>14</td><td>instcount</td><td>Number_of_FPToSI_insts</td></tr><tr><td>15</td><td>instcount</td><td>Number_of_FSub_insts</td></tr><tr><td>16</td><td>instcount</td><td>Number_of_GetElementPtr_insts</td></tr><tr><td>17</td><td>instcount</td><td>Number_of_ICmp_insts</td></tr><tr><td>18</td><td>instcount</td><td>Number_of_Load_insts</td></tr><tr><td>19</td><td>instcount</td><td>Number_of_Mul_insts</td></tr><tr><td>20</td><td>instcount</td><td>Number_of_PHI_insts</td></tr><tr><td>21</td><td>instcount</td><td>Number_of_Ret_insts</td></tr><tr><td>22</td><td>instcount</td><td>Number_of_SDiv_insts</td></tr><tr><td>23</td><td>instcount</td><td>Number_of_SExt_insts</td></tr><tr><td>24</td><td>instcount</td><td>Number_of_SIToFP_insts</td></tr><tr><td>25</td><td>instcount</td><td>Number_of_SRem_insts</td></tr><tr><td>26</td><td>instcount</td><td>Number_of_Select_insts</td></tr><tr><td>27</td><td>instcount</td><td>Number_of_Store_insts</td></tr><tr><td>28</td><td>instcount</td><td>Number_of_Sub_insts</td></tr><tr><td>29</td><td>instcount</td><td>Number_of_Switch_insts</td></tr><tr><td>30</td><td>instcount</td><td>Number_of_Trunc_insts</td></tr><tr><td>31</td><td>instcount</td><td>Number_of_Unreachable_insts</td></tr><tr><td>32</td><td>instcount</td><td>Number_of_ZExt_insts</td></tr><tr><td>33</td><td>instcount</td><td>Number_of_basic_blocks</td></tr><tr><td>34</td><td>instcount</td><td>Number_of_non-external_functions</td></tr><tr><td>35</td><td>instcount</td><td>Number_of_instructions_(of_all_types)</td></tr><tr><td>36</td><td>mem2reg</td><td>Number_of_alloca's_promoted_within_one_block</td></tr><tr><td>37</td><td>mem2reg</td><td>Number_of_PHI_nodes_inserted</td></tr><tr><td>38</td><td>mem2reg</td><td>Number_of_alloca's_promoted</td></tr><tr><td>39</td><td>mem2reg</td><td>Number_of_alloca's_promoted_with_a_single_store</td></tr><tr><td>40</td><td>instcount</td><td>Number_of_AShr_insts</td></tr><tr><td>41</td><td>instcount</td><td>Number_of_And_insts</td></tr><tr><td>42</td><td>instcount</td><td>Number_of_Or_insts</td></tr><tr><td>43</td><td>mem2reg</td><td>Number_of_dead_alloca's_removed</td></tr><tr><td>44</td><td>instcount</td><td>Number_of_LShr_insts</td></tr><tr><td>45</td><td>instcount</td><td>Number_of_Shl_insts</td></tr><tr><td>46</td><td>instcount</td><td>Number_of_UDiv_insts</td></tr><tr><td>47</td><td>instcount</td><td>Number_of_URem_insts</td></tr><tr><td>48</td><td>instcount</td><td>Number_of_Xor_insts</td></tr><tr><td>49</td><td>instcount</td><td>Number_of_UIToFP_insts</td></tr><tr><td>50</td><td>instcount</td><td>Number_of_FPExt_insts</td></tr><tr><td>51</td><td>instcount</td><td>Number_of_FPTrunc_insts</td></tr><tr><td>52</td><td>instcount</td><td>Number_of_ExtractValue_insts</td></tr><tr><td>53</td><td>instcount</td><td>Number_of_FPToUI_insts</td></tr><tr><td>54</td><td>instcount</td><td>Number_of_PtrToInt_insts</td></tr><tr><td>55</td><td>instcount</td><td>Number_of_IntToPtr_insts</td></tr><tr><td>56</td><td>instcount</td><td>Number_of_ExtractElement_insts</td></tr><tr><td>57</td><td>instcount</td><td>Number_of_InsertElement_insts</td></tr><tr><td>58</td><td>instcount</td><td>Number_of_ShuffleVector_insts</td></tr><tr><td>59</td><td>instcount</td><td>Number_of_IndirectBr_insts</td></tr>
-              </table>
-            </div>
-          </li>
-        </ul>
+        <!-- --------------------------------------------------------------- -->
+        <!-- ------------extracted feature table used to go here------------ -->
+        <!-- --------------------------------------------------------------- -->
+        
       </div> <!-- div-col-01 -->
 
-      <div id="div-col-02">
+    <!-- ==============================section============================== -->
+
+      <div id="div-col-02" class="section">
 
       <div>
         <h3>Available Benchmarks</h3>
-    The following Benchmarks are being used in our work. The ones that are
-    not yet available for download will be posted here soon.
+    The following benchmark suites are being used in our work:
       </div>
 
-      <hr style="visibility:hidden;">
 
-      <ul>
+      <!-- <hr style="visibility:hidden;"> -->
 
-        <li>
+
+      <ul> <!-- ----------------------list of contents---------------------- -->
+        <li> <!-- ---------------------------item--------------------------- -->
+          <!-- content title -->
           <label for="checkbox-angha-10k" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">
+              expand_more
+            </i>
             <b>Angha-Bench (10K largest functions)</b>
           </label>
-          <input type="checkbox" id="checkbox-angha-10k" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
             The 10.000 largest compilable C functions extracted from
             programs, mined from popular github repositories.
-            <div style="text-align: right">
-              78 MB
-              <a href="http://cuda.dcc.ufmg.br/angha/src/largest10k.tar.gz" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">archive</i></a>
+
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
+                78 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/largest10k.tar.gz" target="_blank">
+                  <i class="material-icons m">
+                    archive
+                  </i>
+                </a>
+              </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/placeholder.png" alt="" class="chart-img">
+              <img src="include/pics/placeholder.png" alt="" class="chart-img">
+            </div>
+
           </div>
-        </li>
+        </li> <!-- -----------------------end of item----------------------- -->
         
-        <li>
+
+        <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-angha-full" class="label-expand">
             <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
             <b>Angha-Bench (All functions)</b>
           </label>
-          <input type="checkbox" id="checkbox-angha-full" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
             Several (aprox. 530.000) single function C files extracted from
             programs, mined from popular github repositories.
-            <div style="text-align: right">
-              187 MB
-              <a href="http://cuda.dcc.ufmg.br/angha/src/all_angha_kernels.tar.gz" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">archive</i></a>
+
+            <div>
+              <span style="text-align: right">
+                187 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/all_angha_kernels.tar.gz" target="_blank">
+                  <i class="material-icons m">
+                    archive
+                  </i>
+                </a>
+              </span>
             </div>
           </div>
-        </li>
+        </li> <!-- -----------------------end of item----------------------- -->
         
-        <li>
+        <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-angha-10k-whole" class="label-expand">
             <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
             <b>Angha-Bench (10K largest whole programs)</b>
           </label>
-          <input type="checkbox" id="checkbox-angha-10k-whole" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
-      The 10.000 largest reconstructed compilable C programs, mined from popular github repositories.
-            <div style="text-align: right">
-        15 MB
-              <a href="http://cuda.dcc.ufmg.br/angha/src/angha_10k_largest_whole.gz" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">archive</i></a>
+            The 10.000 largest reconstructed compilable C programs,
+            mined from popular github repositories.
+
+            <div>
+              <span style="text-align: right">
+                15 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/angha_10k_largest_whole.gz" target="_blank">
+                  <i class="material-icons m">
+                    archive
+                  </i>
+                </a>
+              </span>
             </div>
           </div>
-        </li>
+        </li> <!-- -----------------------end of item----------------------- -->
 
-        <li>
+        <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-tf" class="label-expand">
             <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
             <b>LLVM Test-Suite and more</b>
           </label>
-          <input type="checkbox" id="checkbox-tf" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
-            Collection of programs that come with the LLVM Test-Suit with some additions.
-            More details can be found in the original repository.
-            <div style="text-align: right">
-              <a href="https://github.com/lac-dcc/Benchmarks" target="_blank"><img src="include/icons/gh_dark.png" style="height:1.6em"></img></a>
+            Collection of programs that come with the LLVM Test-Suit with some
+            additions. More details can be found in the original repository.
+
+            <div>
+              <span style="text-align: right">
+                <a href="https://github.com/lac-dcc/Benchmarks" target="_blank"><img src="include/icons/gh_dark.png" style="height:1.6em"></img></a>
+              </span>
             </div>
           </div>
-        </li>
+        </li> <!-- -----------------------end of item----------------------- -->
         
-        <li>
+        <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-ldrgen" class="label-expand">
             <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
             <b>Liveness-Driven Random Generated Programs (ldrgen)</b>
           </label>
-          <input type="checkbox" id="checkbox-ldrgen" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
-      10K largest programs among the 530.000 generated by ldrgen.
-      The construction is bottom-up, guided by a simultaneous structural
-            data-flow analysis to ensure that the generator never generates dead code.
-            <div style="text-align: right">
-        115 MB
-              <a href="http://cuda.dcc.ufmg.br/angha/src/ldrgen.tar.gz" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">archive</i></a>
-              <a href="https://link.springer.com/chapter/10.1007/978-3-319-94460-9_7" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">description</i></a>
+            10K largest programs among the 530.000 generated by ldrgen.
+            The construction is bottom-up, guided by a simultaneous structural
+            data-flow analysis to ensure that the generator never generates dead
+            code.
+
+            <div>
+              <span style="text-align: right">
+                115 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/ldrgen.tar.gz" target="_blank">
+                  <i class="material-icons m">
+                    archive
+                  </i>
+                </a>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-319-94460-9_7" target="_blank">
+                  <i class="material-icons m">
+                    description
+                  </i>
+                </a>
+              </span>
             </div>
           </div>
-        </li>
+        </li> <!-- -----------------------end of item----------------------- -->
         
-        <li>
+        <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-csmith" class="label-expand">
             <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
             <b>CSmith</b>
           </label>
-          <input type="checkbox" id="checkbox-csmith" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
-      10K largest programs among the 530.000 generated by CSmith,
-      a randomized test-case generation tool.
-            <div style="text-align: right">
-        596 MB
-              <a href="http://cuda.dcc.ufmg.br/angha/src/csmith.tar.gz" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">archive</i></a>
-              <a href="https://dl.acm.org/citation.cfm?id=1993532" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">description</i></a>
+            10K largest programs among the 530.000 generated by CSmith,
+            a randomized test-case generation tool.
+
+            <div>
+              <span style="text-align: right">
+                596 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/csmith.tar.gz" target="_blank">
+                  <i class="material-icons m">
+                    archive
+                  </i>
+                </a>
+                <a href="https://dl.acm.org/citation.cfm?id=1993532" target="_blank">
+                  <i class="material-icons m">
+                    description
+                  </i>
+                </a>
+              </span>
             </div>
           </div>
-        </li>
+        </li> <!-- -----------------------end of item----------------------- -->
 
-        <li>
+        <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-deepsmith" class="label-expand">
             <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
             <b>DeepSmith</b>
           </label>
-          <input type="checkbox" id="checkbox-deepsmith" style="display:none;">
+
+          <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
-      1K programs generated by DeepSmith, an approach that uses deep learning techniques.
-            <div style="text-align: right">
-        &lt; 1 MB
-              <a href="http://cuda.dcc.ufmg.br/angha/src/deepsmith.zip" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">archive</i></a>
-              <a href="https://dl.acm.org/citation.cfm?id=3213848" target="_blank"><i class="material-icons m" style="position: relative; top:0.2vw">description</i></a>
+            1K programs generated by DeepSmith, an approach
+            that uses deep learning techniques.
+
+            <div>
+              <span style="text-align: right">
+                &lt; 1 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/deepsmith.zip" target="_blank">
+                  <i class="material-icons m">
+                    archive
+                  </i>
+                </a>
+                <a href="https://dl.acm.org/citation.cfm?id=3213848" target="_blank">
+                  <i class="material-icons m">
+                    description
+                  </i>
+                </a>
+              </span>
             </div>
           </div>
-        </li>
-
-      </ul>
+        </li> <!-- -----------------------end of item----------------------- -->
+      </ul> <!-- ------------------------end of list------------------------ -->
 
       </div> <!-- div-col-02 -->
 
-      <div id="div-footer">
+    <!-- ==============================section============================== -->
+
+      <div id="div-footer" class="section">
         <hr>
         Other 
         <a href="http://cuda.dcc.ufmg.br/">projects</a>

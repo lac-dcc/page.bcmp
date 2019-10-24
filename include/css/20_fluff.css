@@ -1,16 +1,8 @@
 
 
-.icon-expand
-{
-	position: relative;
-	top: 2px;
-	border: 1px solid grey;
-	border-radius: 1.6em;
-}
-
 .icon-expand:hover
 {
-	background-color: #eaeaea;
+	color: #fff;
 }
 
 .label-expand:hover
@@ -24,27 +16,6 @@
 {
 	display: none;
 }
-/*	color: #d4d4d4;
-	overflow: auto;
-	max-height: 20vw;
-	padding: 0.5vw 0.6vw 0.5vw 2vw;
-	height: 0;
-}
-
-:checked + .div-hidden-expandable
-{
-	display: block;
-	color: #323232;
-	height: auto;
-	animation-name: expand;
-	animation-duration: 0.1s;
-}
-
-@keyframes expand
-{
-	0% {color:#d4d4d4;line-height: 0;}
-	100% {color: #323232;}
-}*/
 
 
 
@@ -148,6 +119,8 @@
 
 .material-icons
 {
+	position: relative;
+	top: 0.25em;
 	color: rgb(50, 50, 50);
 }
 
