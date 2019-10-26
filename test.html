@@ -49,10 +49,9 @@
           and synthetic programs produced by various benchmark generators. We
           have extracted feature vectors (59 different features) for all these
           benchmarks, in case the interested reader wants to use them to
-          autotune compilers. The passes used in the extraction are listed
-          below (result of <i><nobr>-mem2reg</nobr> <nobr>-O0</nobr>
-          <nobr>-VarCounter</nobr> <nobr>-EdgeCounter</nobr>
-          <nobr>-stats</nobr></i>).
+          autotune compilers. The passes used in the extraction are:
+          <i><nobr>-mem2reg</nobr> <nobr>-O0</nobr> <nobr>-VarCounter</nobr>
+          <nobr>-EdgeCounter</nobr> <nobr>-stats</nobr></i>.
         </div>
 
         <hr style="visibility:hidden;">
@@ -80,9 +79,7 @@
         <li> <!-- ---------------------------item--------------------------- -->
           <!-- content title -->
           <label for="checkbox-angha-10k" class="label-expand">
-            <i class="icon-expand material-icons m">
-              expand_more
-            </i>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>Angha-Bench (10K largest functions)</b>
           </label>
 
@@ -96,18 +93,16 @@
               <a href="#" style="width: 50%" class="a-expand">Show more</a>
               <span style="width: 50%; text-align: right">
                 78 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/largest10k.tar.gz" target="_blank">
-                  <i class="material-icons m">
-                    archive
-                  </i>
-                </a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/largest10k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
               </span>
             </div>
 
             <!-- images -->
             <div class="div-hidden-expandable img-grid" style="display: grid">
-              <img src="include/pics/placeholder.png" alt="" class="chart-img">
-              <img src="include/pics/placeholder.png" alt="" class="chart-img">
+              <img src="include/pics/charts/largest10_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/largest10_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/largest10_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/largest10_04_edges_bb.png" alt="" class="chart-img">
             </div>
 
           </div>
@@ -116,7 +111,7 @@
 
         <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-angha-full" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>Angha-Bench (All functions)</b>
           </label>
 
@@ -125,22 +120,29 @@
             Several (aprox. 530.000) single function C files extracted from
             programs, mined from popular github repositories.
 
-            <div>
-              <span style="text-align: right">
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
                 187 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/all_angha_kernels.tar.gz" target="_blank">
-                  <i class="material-icons m">
-                    archive
-                  </i>
-                </a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/all_angha_kernels.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
               </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/charts/angha530k_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/angha530k_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/angha530k_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/angha530k_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
           </div>
         </li> <!-- -----------------------end of item----------------------- -->
         
         <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-angha-10k-whole" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>Angha-Bench (10K largest whole programs)</b>
           </label>
 
@@ -149,22 +151,29 @@
             The 10.000 largest reconstructed compilable C programs,
             mined from popular github repositories.
 
-            <div>
-              <span style="text-align: right">
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
                 15 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/angha_10k_largest_whole.gz" target="_blank">
-                  <i class="material-icons m">
-                    archive
-                  </i>
-                </a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/angha_10k_largest_whole.gz" target="_blank"><i class="material-icons m">archive</i></a>
               </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/charts/anghawhole_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/anghawhole_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/anghawhole_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/anghawhole_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
           </div>
         </li> <!-- -----------------------end of item----------------------- -->
 
         <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-tf" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>LLVM Test-Suite and more</b>
           </label>
 
@@ -173,17 +182,30 @@
             Collection of programs that come with the LLVM Test-Suit with some
             additions. More details can be found in the original repository.
 
-            <div>
-              <span style="text-align: right">
-                <a href="https://github.com/lac-dcc/Benchmarks" target="_blank"><img src="include/icons/gh_dark.png" style="height:1.6em"></img></a>
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
+                <a href="https://github.com/lac-dcc/Benchmarks" target="_blank">
+                  <img src="include/icons/gh_dark.png" style="height:1.6em"></img>
+                </a>
               </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/charts/tf_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/tf_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/tf_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/tf_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
           </div>
         </li> <!-- -----------------------end of item----------------------- -->
         
         <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-ldrgen" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>Liveness-Driven Random Generated Programs (ldrgen)</b>
           </label>
 
@@ -194,27 +216,30 @@
             data-flow analysis to ensure that the generator never generates dead
             code.
 
-            <div>
-              <span style="text-align: right">
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
                 115 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/ldrgen.tar.gz" target="_blank">
-                  <i class="material-icons m">
-                    archive
-                  </i>
-                </a>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-319-94460-9_7" target="_blank">
-                  <i class="material-icons m">
-                    description
-                  </i>
-                </a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/ldrgen.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-319-94460-9_7" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/charts/ldrgen10k_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/ldrgen10k_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/ldrgen10k_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/ldrgen10k_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
           </div>
         </li> <!-- -----------------------end of item----------------------- -->
         
         <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-csmith" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>CSmith</b>
           </label>
 
@@ -223,27 +248,30 @@
             10K largest programs among the 530.000 generated by CSmith,
             a randomized test-case generation tool.
 
-            <div>
-              <span style="text-align: right">
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
                 596 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/csmith.tar.gz" target="_blank">
-                  <i class="material-icons m">
-                    archive
-                  </i>
-                </a>
-                <a href="https://dl.acm.org/citation.cfm?id=1993532" target="_blank">
-                  <i class="material-icons m">
-                    description
-                  </i>
-                </a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/csmith.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="https://dl.acm.org/citation.cfm?id=1993532" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/charts/csmith10k_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/csmith10k_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/csmith10k_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/csmith10k_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
           </div>
         </li> <!-- -----------------------end of item----------------------- -->
 
         <li> <!-- ---------------------------item--------------------------- -->
           <label for="checkbox-deepsmith" class="label-expand">
-            <img src="include/icons/expand.svg" height="15" class="icon-expand"></img>
+            <i class="icon-expand material-icons m">expand_more</i>
             <b>DeepSmith</b>
           </label>
 
@@ -252,21 +280,24 @@
             1K programs generated by DeepSmith, an approach
             that uses deep learning techniques.
 
-            <div>
-              <span style="text-align: right">
+            <!-- links & more -->
+            <div style="display: flex;">
+              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <span style="width: 50%; text-align: right">
                 &lt; 1 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/deepsmith.zip" target="_blank">
-                  <i class="material-icons m">
-                    archive
-                  </i>
-                </a>
-                <a href="https://dl.acm.org/citation.cfm?id=3213848" target="_blank">
-                  <i class="material-icons m">
-                    description
-                  </i>
-                </a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/deepsmith.zip" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="https://dl.acm.org/citation.cfm?id=3213848" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
+
+            <!-- images -->
+            <div class="div-hidden-expandable img-grid" style="display: grid">
+              <img src="include/pics/charts/deepsmith_01_load_store.png" alt="" class="chart-img">
+              <img src="include/pics/charts/deepsmith_02_allinstcnt_bb.png" alt="" class="chart-img">
+              <img src="include/pics/charts/deepsmith_03_varuse_namedvars.png" alt="" class="chart-img">
+              <img src="include/pics/charts/deepsmith_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
           </div>
         </li> <!-- -----------------------end of item----------------------- -->
       </ul> <!-- ------------------------end of list------------------------ -->
