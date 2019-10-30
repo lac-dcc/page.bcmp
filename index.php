@@ -176,8 +176,8 @@
             <div style="display: flex;">
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
-                78 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/largest10k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                17 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/angha_kernels_largest_10k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
               </span>
             </div>
 
@@ -209,7 +209,7 @@
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 187 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/all_angha_kernels.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/angha_kernels_all_530k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
               </span>
             </div>
 
@@ -240,7 +240,7 @@
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 15 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/angha_10k_largest_whole.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/angha_wholefiles_all_15k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
               </span>
             </div>
 
@@ -305,7 +305,7 @@
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 115 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/ldrgen.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/ldrgen_kernels_largest_10k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
                 <a href="https://link.springer.com/chapter/10.1007/978-3-319-94460-9_7" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
@@ -337,7 +337,7 @@
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 596 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/csmith.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/csmith_kernels_largest_10k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
                 <a href="https://dl.acm.org/citation.cfm?id=1993532" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
@@ -369,7 +369,7 @@
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 &lt; 1 MB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/deepsmith.zip" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/deepsmith_kernels_all_1k.zip" target="_blank"><i class="material-icons m">archive</i></a>
                 <a href="https://dl.acm.org/citation.cfm?id=3213848" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
