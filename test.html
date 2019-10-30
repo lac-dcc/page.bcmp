@@ -162,7 +162,7 @@
       <ul> <!-- ----------------------list of contents---------------------- -->
         <li> <!-- ---------------------------item--------------------------- -->
           <!-- content title -->
-          <label for="checkbox-angha-10k" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
             <b>Angha-Bench (10K largest functions)</b>
           </label>
@@ -194,7 +194,7 @@
         
 
         <li> <!-- ---------------------------item--------------------------- -->
-          <label for="checkbox-angha-full" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
             <b>Angha-Bench (All functions)</b>
           </label>
@@ -225,14 +225,14 @@
         </li> <!-- -----------------------end of item----------------------- -->
         
         <li> <!-- ---------------------------item--------------------------- -->
-          <label for="checkbox-angha-10k-whole" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
-            <b>Angha-Bench (10K largest whole programs)</b>
+            <b>Angha-Bench (15K whole programs)</b>
           </label>
 
           <!-- content, hidden by default -->
           <div class="div-hidden-expandable">
-            The 10.000 largest reconstructed compilable C programs,
+            All the (aprox.) 15.000 reconstructed compilable C programs,
             mined from popular github repositories.
 
             <!-- links & more -->
@@ -256,7 +256,7 @@
         </li> <!-- -----------------------end of item----------------------- -->
 
         <li> <!-- ---------------------------item--------------------------- -->
-          <label for="checkbox-tf" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
             <b>LLVM Test-Suite and more</b>
           </label>
@@ -288,7 +288,7 @@
         </li> <!-- -----------------------end of item----------------------- -->
         
         <li> <!-- ---------------------------item--------------------------- -->
-          <label for="checkbox-ldrgen" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
             <b>Liveness-Driven Random Generated Programs (ldrgen)</b>
           </label>
@@ -322,7 +322,7 @@
         </li> <!-- -----------------------end of item----------------------- -->
         
         <li> <!-- ---------------------------item--------------------------- -->
-          <label for="checkbox-csmith" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
             <b>CSmith</b>
           </label>
@@ -354,7 +354,7 @@
         </li> <!-- -----------------------end of item----------------------- -->
 
         <li> <!-- ---------------------------item--------------------------- -->
-          <label for="checkbox-deepsmith" class="label-expand">
+          <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
             <b>DeepSmith</b>
           </label>
