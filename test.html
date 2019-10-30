@@ -21,7 +21,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="src/jquery-3.4.1.js"></script>
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
 
   </head>
 
@@ -44,14 +43,99 @@
           missing declarations to ensure that they compile. This page contains
           530K samples of programs that we have generated in this way. You can
           compile them all into object files using clang or gcc. Additionally,
-          we provide the all the machinery for those interested in producing
+          we provide all the machinery for those interested in producing
           more benchmarks. For comparison, we also provide actual C benchmarks,
           and synthetic programs produced by various benchmark generators. We
           have extracted feature vectors (59 different features) for all these
           benchmarks, in case the interested reader wants to use them to
           autotune compilers. The passes used in the extraction are:
-          <i><nobr>-mem2reg</nobr> <nobr>-O0</nobr> <nobr>-VarCounter</nobr>
-          <nobr>-EdgeCounter</nobr> <nobr>-stats</nobr></i>.
+          <i><nobr>-mem2reg</nobr> <nobr>-O0</nobr> <a href="https://github.com/condekind/llvm-ep" target="_blank"><nobr>-VarCounter*</nobr>
+          <nobr>-EdgeCounter*</nobr></a> <nobr>-stats</nobr></i>.
+        </div>
+
+        <div>
+          <div style="padding-top: 1em; padding-bottom: 0.8em;">
+            We provide charts relating different characteristics of the
+            benchmarks available in this page. Inside each collection featured 
+            on the "Available Benchmarks" section, click the 'data analysis' 
+            link to have access to them. These charts show relations between 
+            the following program features:
+          </div>
+
+          <div style="padding-right: 0.8em; padding-left: 0.8em; font-size: 90%">
+            <table>
+              <tr>
+                <td>
+                  Number of store instructions:
+                </td>
+                <td>
+                  How many store operations appear in the LLVM representation of the
+                  program.
+                </td>
+              </tr>
+
+              <tr>          
+                <td>
+                  Number of load instructions:
+                </td>
+                <td>
+                  How many load operations appear in the LLVM representation of the
+                  program.
+                </td>
+              </tr>
+                
+              <tr>          
+                <td>
+                  Number of basic blocks:
+                </td>
+                <td>
+                  Number of <a href="https://en.wikipedia.org/wiki/Basic_block" target="blank">basic blocks</a> in
+                  the LLVM representation of the program.
+                </td>
+              </tr>
+                
+              <tr>          
+                <td>
+                  Number of instructions:
+                </td>
+                <td>
+                  Quantity of LLVM instructions in the intermediate representation of
+                  each program.
+                </td>
+              </tr>
+                
+              <tr>          
+                <td>
+                  Number of named variables:
+                </td>
+                <td>
+                  Quantity of SSA-form variables in the LLVM representation of each
+                  program.
+                </td>
+              </tr>
+                
+              <tr>          
+                <td>
+                  Number of variable uses:
+                </td>
+                <td>
+                  Sum of the number of times that each named variable appears as an
+                  operand in some instruction in the LLVM representation of the
+                  program.
+                </td>
+              </tr>
+                
+              <tr>          
+                <td>
+                  Number of edges:
+                </td>
+                <td>
+                  Number of edges in the <a href="https://en.wikipedia.org/wiki/Control-flow_graph" target="blank">Control Flow Graph</a> of
+                  each program.
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
 
         <hr style="visibility:hidden;">
@@ -90,7 +174,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 78 MB
                 <a href="http://cuda.dcc.ufmg.br/angha/src/largest10k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
@@ -122,7 +206,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 187 MB
                 <a href="http://cuda.dcc.ufmg.br/angha/src/all_angha_kernels.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
@@ -153,7 +237,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 15 MB
                 <a href="http://cuda.dcc.ufmg.br/angha/src/angha_10k_largest_whole.gz" target="_blank"><i class="material-icons m">archive</i></a>
@@ -184,7 +268,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 <a href="https://github.com/lac-dcc/Benchmarks" target="_blank">
                   <img src="include/icons/gh_dark.png" style="height:1.6em"></img>
@@ -218,7 +302,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 115 MB
                 <a href="http://cuda.dcc.ufmg.br/angha/src/ldrgen.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
@@ -250,7 +334,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 596 MB
                 <a href="http://cuda.dcc.ufmg.br/angha/src/csmith.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
@@ -282,7 +366,7 @@
 
             <!-- links & more -->
             <div style="display: flex;">
-              <a href="#" style="width: 50%" class="a-expand">Show more</a>
+              <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 &lt; 1 MB
                 <a href="http://cuda.dcc.ufmg.br/angha/src/deepsmith.zip" target="_blank"><i class="material-icons m">archive</i></a>
