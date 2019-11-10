@@ -369,7 +369,7 @@
               <a href="#" style="width: 50%" class="a-expand">Data analysis</a>
               <span style="width: 50%; text-align: right">
                 59 KB
-                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/deepsmith_kernels_all_1k.zip" target="_blank"><i class="material-icons m">archive</i></a>
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/deepsmith_kernels_all_1k.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
                 <a href="https://dl.acm.org/citation.cfm?id=3213848" target="_blank"><i class="material-icons m">description</i></a>
               </span>
             </div>
