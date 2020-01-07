@@ -29,7 +29,8 @@
 
     <div id="div-body-wrapper" style="width: 100%;"> <!-- Div Header -->
 
-      <div id="div-header-logo"><span id="span-header-logo">Angha</span></div>
+			<!-- ------------------------Header Logo Image------------------------ -->
+      <div id="div-header-logo"><img src="include/icons/angha_logo.png" style="width: 100px;"></div>
 
     <!-- ==============================section============================== -->
 
