@@ -196,7 +196,7 @@
         <li> <!-- ---------------------------item--------------------------- -->
           <label class="label-expand">
             <i class="icon-expand material-icons m">expand_more</i>
-            <b>Angha-Bench (All functions)</b>
+            <b>Angha-Bench (530K functions)</b>
           </label>
 
           <!-- content, hidden by default -->
@@ -219,6 +219,29 @@
               <img src="include/pics/charts/angha530k_02_allinstcnt_bb.png" alt="" class="chart-img">
               <img src="include/pics/charts/angha530k_03_varuse_namedvars.png" alt="" class="chart-img">
               <img src="include/pics/charts/angha530k_04_edges_bb.png" alt="" class="chart-img">
+            </div>
+
+          </div>
+        </li> <!-- -----------------------end of item----------------------- -->
+
+        <li> <!-- ---------------------------item--------------------------- -->
+          <label class="label-expand">
+            <i class="icon-expand material-icons m">expand_more</i>
+            <b>Angha-Bench (All functions)</b>
+          </label>
+
+          <!-- content, hidden by default -->
+          <div class="div-hidden-expandable">
+            One million single function C files extracted from
+            programs, mined from popular github repositories.
+
+            <!-- links & more -->
+            <div style="display: flex;">
+			  <span style="width: 50%;"></span>
+              <span style="width: 50%; text-align: right">
+                241 MB
+                <a href="http://cuda.dcc.ufmg.br/angha/src/suites/angha_kernels_all_1million.tar.gz" target="_blank"><i class="material-icons m">archive</i></a>
+              </span>
             </div>
 
           </div>
